@@ -30,6 +30,8 @@ fetch("https://content.guardianapis.com/search" + "?show-fields=body" + "&api-ke
   });
 
 
+
+
   function insertIntoHTML(htmlString) {
     var element = document.getElementById("app");
     element.innerHTML = htmlString
@@ -37,8 +39,11 @@ fetch("https://content.guardianapis.com/search" + "?show-fields=body" + "&api-ke
 
   function outputToHtml(article) {
     let html = article.fields.body
-    return "<body>" + html + "</body>"     
+    return "<body>" + html + "</body>"
   }
+
+  // Example to add summed up body
+  // http://news-summary-api.herokuapp.com/aylien?apiRequestUrl=https://api.aylien.com/api/v1/summarize?url=https://www.theguardian.com/australia-news/live/2020/oct/19/coronavirus-australia-live-updates-melbourne-wakes-up-to-eased-lockdown-as-federal-parliament-returns
 
   function _getArticle(id) {
     for (let index = 0; index < data[0].length; index++) {
